@@ -1,0 +1,10 @@
+field,description,data_type,unit
+date,Observation date,Date,-
+state,State or UT name,Text,-
+district,District name,Text,-
+crop,Crop or commodity,Text,-
+season,Agricultural season,Text,-
+area_ha,Cultivated area,Numeric,hectare
+production_tonnes,Production quantity,Numeric,tonne
+yield_t_ha,Crop yield,Numeric,tonne/hectare
+price,Market price,Numeric,INR
