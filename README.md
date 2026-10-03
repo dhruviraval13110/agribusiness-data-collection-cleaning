@@ -4,70 +4,89 @@ This project is part of my Junior Data Analyst – Agribusiness Virtual Internsh
 
 ## Objective
 
-The purpose of this project is to understand how agricultural data can be collected from public sources and prepared for analysis.
+The purpose of this project is to collect a real public agriculture dataset and prepare it for analysis by applying data profiling, cleaning and quality checks.
 
-The project focuses on:
+## Dataset Used
 
-- Public agribusiness data sources
-- Data profiling
-- Missing-value checking
-- Duplicate detection
-- Data type conversion
-- Crop and location standardization
-- Unit standardization
-- Outlier investigation
-- Data quality checks
+The project uses agriculture data from FAOSTAT.
 
-## Data Sources
+- Country: India
+- Crops: Rice, Wheat, Maize (corn), Cotton lint, ginned, Sugar cane
+- Years: 2015-2024
+- Elements: Area harvested, Production Quantity and Yield
+- Original dataset size: 129 rows and 15 columns
 
-The sources considered in this project include:
+## Data Quality Checks
 
-- Government Open Data Platform India
-- India Meteorological Department
-- e-NAM
-- ICAR
-- MoSPI
-- FAOSTAT
+The dataset was checked for:
+
+- Missing values
+- Duplicate records
+- Data types
+- Numeric values
+- Year range
+- Unusual values and potential outliers
+
+The initial profiling found **0 duplicate rows**.
+
+## Cleaning Performed
+
+1. Standardized column names
+2. Cleaned text fields
+3. Converted numeric fields
+4. Checked missing values
+5. Checked duplicate records
+6. Checked negative values
+7. Validated the selected year range
+8. Investigated potential outliers using the IQR method
+9. Exported the cleaned dataset separately
+
+Potential outliers were investigated rather than automatically removed because agricultural production can naturally vary between crops and years.
 
 ## Tools Used
 
 - Python
 - Pandas
 - NumPy
-- Jupyter Notebook
-- Excel
-- Git and GitHub
+- JupyterLab
+- Git
+- GitHub
 
-## Project Workflow
+## Workflow
 
-Raw Data  
-↓  
-Data Profiling  
-↓  
-Data Cleaning  
-↓  
-Standardization  
-↓  
-Quality Checks  
-↓  
-Analysis-Ready Data
+Public Data Source
+        ↓
+Data Acquisition
+        ↓
+Data Profiling
+        ↓
+Data Cleaning
+        ↓
+Data Validation
+        ↓
+Outlier Investigation
+        ↓
+Cleaned Dataset
 
 ## Project Structure
 
-- `data/` – raw and cleaned datasets
-- `notebooks/` – data exploration and cleaning notebook
-- `scripts/` – Python cleaning scripts
-- `metadata/` – source register and data dictionary
-- `reports/` – internship report
+```text
+data/
+├── raw/
+│   └── faostat_india_crops_2015_2024.csv
+└── cleaned/
+    └── faostat_india_crops_2015_2024_cleaned.csv
 
-## Agribusiness Considerations
+metadata/
+├── cleaning_log.md
+├── data_dictionary.csv
+└── source_register.csv
 
-The cleaning process considers seasonal variations, geographical differences, weather conditions and market fluctuations.
+notebooks/
+└── data_profiling_cleaning.ipynb
 
-Unusual observations are investigated before being removed because an extreme value may represent a genuine agricultural or market event.
+scripts/
+└── clean_agriculture_data.py
 
-## Internship
-
-**Role:** Junior Data Analyst – Agribusiness Virtual Intern  
-**Organization:** YuvaIntern  
-**Task:** Week 2 – Data Collection Strategy and Cleaning Plan
+reports/
+└── Week 2 internship report
