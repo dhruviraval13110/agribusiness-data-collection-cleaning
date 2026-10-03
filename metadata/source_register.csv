@@ -1,0 +1,7 @@
+source_name,dataset_type,website,purpose
+Government Open Data Platform India,Agriculture statistics,https://data.gov.in/,Crop production and yield
+India Meteorological Department,Weather data,https://mausam.imd.gov.in/,Rainfall and temperature
+e-NAM,Market data,https://enam.gov.in/,Agricultural market information
+ICAR,Agricultural research,https://www.icar.gov.in/,Agricultural research information
+MoSPI,Official statistics,https://www.mospi.gov.in/,Statistical reference data
+FAOSTAT,International agriculture statistics,https://www.fao.org/faostat/,Agricultural comparison
